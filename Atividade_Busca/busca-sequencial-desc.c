@@ -13,7 +13,7 @@ int main (){
     int v[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, val;
     printf("Digite um valor: ");
     scanf("%d", &val);
-    int pos = buscaSequencialDesc(v, 10, val);
+    int pos = buscaSequencialDesc(10, v, val);
     if (pos != -1) {
         printf ("O valor %d foi encontrado na posição %d\n", val, pos);
     } else {

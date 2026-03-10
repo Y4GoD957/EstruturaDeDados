@@ -4,7 +4,7 @@ int buscaBinariaDesc(int v[], int size, int val) {
     int inicio = 0, fim = size - 1, meio;
     while (inicio <= fim) {
         meio = (inicio + fim) / 2;
-        if (v[meio] == valor) {
+        if (v[meio] == val) {
             return meio;
         }
         else if (v[meio] < val) {
@@ -22,7 +22,7 @@ int main() {
     int val;
     printf("Digite um valor: ");
     scanf("%d", &val);
-    int pos = buscaBinariaDecrescente(vetor, 10, valor);
+    int pos = buscaBinariaDesc(v, 10, val);
     if (pos != -1) {
         printf("O valor %d foi encontrado na posicao %d\n", val, pos);
     } else {
