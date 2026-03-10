@@ -13,3 +13,9 @@ void maiorMenor(int v[], int size) {
     printf("Maior valor: %d\n", maior);
     printf("Menor valor: %d\n", menor);
 }
+
+int main() {
+    int v[10] = {3, 7, 2, 7, 5, 7, 9, 1, 4, 7};
+    maiorEMenor(v, 10);
+    return 0;
+}
