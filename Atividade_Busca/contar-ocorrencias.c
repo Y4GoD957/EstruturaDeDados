@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int contarOcorrencias(int v[], int size, int val) {
     
     int contador = 0;
