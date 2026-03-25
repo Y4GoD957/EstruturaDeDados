@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+void imprimir_vetor(int n, int vet[]) {
+    int i;
+
+    for (i = 0; i < n; i++) {
+        printf("%d ", vet[i]);
+    }
+    printf("\n");
+}
+
+void insertion_sort_ingenuo(int n, int vet[]) {
+    int i, j, temp;
+
+    for (i = 1; i < n; i++) {
+        j = i;
+
+        while (j > 0 && vet[j - 1] > vet[j]) {
+            temp = vet[j];
+            vet[j] = vet[j - 1];
+            vet[j - 1] = temp;
+            j--;
+        }
+    }
+}
+
+int main(void) {
+    int vet[] = {6, 5, 3, 1, 8, 7, 2, 4};
+    int n = sizeof(vet) / sizeof(vet[0]);
+
+    printf("Vetor antes da ordenacao:\n");
+    imprimir_vetor(n, vet);
+
+    insertion_sort_ingenuo(n, vet);
+
+    printf("Vetor depois da ordenacao (ingenuo):\n");
+    imprimir_vetor(n, vet);
+
+    return 0;
+}

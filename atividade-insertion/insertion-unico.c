@@ -14,9 +14,8 @@ int main() {
     printf("Vetor original:\n");
     imprimirVetor(vet, tamanho);
 
-    // Primeira inserção: inserir o valor 2 na parte ordenada à esquerda
-    int chave = vet[5];   // valor 2
-    int j = 4;            // começa comparando com o elemento anterior
+    int chave = vet[5];
+    int j = 4;
 
     while (j >= 0 && vet[j] > chave) {
         vet[j + 1] = vet[j];
